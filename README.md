@@ -42,13 +42,6 @@
 - "点击展开 / 滑动收窄"都是真实交互，不是静态样式
 - 首页的空会话大输入框（`uV2eYG_hero`）排除在外，不参与收窄
 
-<table>
-<tr>
-<td><img src="./docs/collapsed.png" width="300" alt="collapsed" /><br/><sub>默认：半透明收窄</sub></td>
-<td><img src="./docs/expanded.png" width="300" alt="expanded" /><br/><sub>点击：展开并显示统计条</sub></td>
-</tr>
-</table>
-
 ### 代码块：标题栏不再吸顶
 
 DSH 的代码块标题栏（语言标签 + 复制按钮）是 `position: sticky; top: 0; z-index: 6`。在带 `padding-top` 的滚动容器里，它的粘附位置会错位（实测停在 y≈32 而非对齐顶部），结果悬在正在滚动的代码内容上方，把第一行代码盖住，语言标签还紧贴汉堡。
