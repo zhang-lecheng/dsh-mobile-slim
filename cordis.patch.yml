@@ -1,0 +1,10 @@
+# Appends the slim mobile client plugin to the browser roster.
+#
+# ORDER MATTERS. This sheet must land after @deepseek-ai/dsh-web-app and after
+# dsh-client-ui-mobile-adapt, because on equal specificity the later stylesheet
+# wins. The plugin itself injects its <style> into <body> (see lib/client.js),
+# which sidesteps the ordering race entirely — but the client entry still has
+# to be registered here.
+- insert:
+    - id: ui-mobile-slim
+      name: 'dsh-mobile-slim'

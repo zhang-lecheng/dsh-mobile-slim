@@ -1,0 +1,54 @@
+{
+  "name": "dsh-mobile-slim",
+  "version": "0.1.0",
+  "description": "Minimal mobile layout for the DeepSeek Harness Web GUI — hamburger-only header, translucent auto-collapsing composer, no sticky code-block banner.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": { "default": "./lib/index.js" },
+    "./client": { "default": "./lib/client.js" },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhang-lecheng/dsh-mobile-slim.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhang-lecheng/dsh-mobile-slim/issues"
+  },
+  "homepage": "https://github.com/zhang-lecheng/dsh-mobile-slim#readme",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "deepseek",
+    "mobile",
+    "plugin",
+    "ui",
+    "minimal",
+    "css"
+  ],
+  "dsh": {
+    "client": {
+      "inject": [],
+      "platform": "web"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dsh": ">=0.2.0-rc.2 <0.3.0",
+      "dshReleases": {
+        "0.2.0-rc.2": "compatible",
+        "0.2.1-rc.2": "compatible"
+      }
+    }
+  },
+  "license": "MIT"
+}
